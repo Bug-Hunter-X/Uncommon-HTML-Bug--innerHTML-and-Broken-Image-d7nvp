@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Incorrectly using innerHTML to modify the div content
+    document.getElementById("myDiv").innerHTML = "<p>This text is now replaced.</p><img src='nonExistentImage.jpg' alt='Image'>"; 
+  </script>
+</body>
+</html>
