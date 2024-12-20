@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Safer way to modify the div content using DOM manipulation
+    const myDiv = document.getElementById("myDiv");
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "This text is now replaced.";
+    myDiv.appendChild(newParagraph);
+
+    const newImage = document.createElement('img');
+    newImage.src = 'validImage.jpg'; // Replace with a valid image path
+    newImage.alt = 'A valid image';
+    myDiv.appendChild(newImage);
+  </script>
+</body>
+</html>
